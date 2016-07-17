@@ -35,12 +35,12 @@ body{
 				<div class="navbar">
 					<div class="navbar-inner">
 						<ul class="sf-menu">
-							<li><a href="#" id="topic"><img src="img/splash_icon1.png" alt="" class="menu_img"><img src="img/splash_icon1_over.png" alt="" class="menu_img_over"><div class="base_text">No Topic</div><div class="num_text">01</div></a></li>
-							<li><a href="#" id="topic"><img src="img/splash_icon2.png" alt="" class="menu_img"><img src="img/splash_icon2_over.png" alt="" class="menu_img_over"><div class="base_text">Movie</div><div class="num_text">02</div></a></li>
-							<li><a href="#"><img src="img/splash_icon3.png" alt="" class="menu_img"><img src="img/splash_icon3_over.png" alt="" class="menu_img_over"><div class="base_text">Food</div><div class="num_text">03</div></a></li>
-							<li><a href="#"><img src="img/splash_icon4.png" alt="" class="menu_img"><img src="img/splash_icon4_over.png" alt="" class="menu_img_over"><div class="base_text">Sport</div><div class="num_text">04</div></a></li>
-							<li><a href="#"><img src="img/splash_icon5.png" alt="" class="menu_img"><img src="img/splash_icon5_over.png" alt="" class="menu_img_over"><div class="base_text">Travel</div><div class="num_text">05</div></a></li>
-							<li><a href="topic.html"><img src="img/splash_icon6.png" alt="" class="menu_img"><img src="img/splash_icon6_over.png" alt="" class="menu_img_over"><div class="base_text" onclick="show_more()">. . .</div><div class="num_text">06</div></a></li>
+							<li><a href="#" name="topic"><img src="img/splash_icon1.png" alt="" class="menu_img"><img src="img/splash_icon1_over.png" alt="" class="menu_img_over"><div class="base_text">No Topic</div><div class="num_text">01</div></a></li>
+							<li><a href="#" name="topic"><img src="img/splash_icon2.png" alt="" class="menu_img"><img src="img/splash_icon2_over.png" alt="" class="menu_img_over"><div class="base_text">Movie</div><div class="num_text">02</div></a></li>
+							<li><a href="#" name="topic"><img src="img/splash_icon3.png" alt="" class="menu_img"><img src="img/splash_icon3_over.png" alt="" class="menu_img_over"><div class="base_text">Food</div><div class="num_text">03</div></a></li>
+							<li><a href="#" name="topic"><img src="img/splash_icon4.png" alt="" class="menu_img"><img src="img/splash_icon4_over.png" alt="" class="menu_img_over"><div class="base_text">Sport</div><div class="num_text">04</div></a></li>
+							<li><a href="#" name="topic"><img src="img/splash_icon5.png" alt="" class="menu_img"><img src="img/splash_icon5_over.png" alt="" class="menu_img_over"><div class="base_text">Travel</div><div class="num_text">05</div></a></li>
+							<li><a href="#" name="topic"><img src="img/splash_icon6.png" alt="" class="menu_img"><img src="img/splash_icon6_over.png" alt="" class="menu_img_over"><div class="base_text" onclick="show_more()">. . .</div><div class="num_text">06</div></a></li>
 						</ul>
 					</div>
 				</div>
@@ -53,8 +53,10 @@ body{
 <script>
 var username = location.search.split('username=')[1];
 var url = "minivid2.html?username="+username;
-var a = document.getElementById('topic');
-a.href = url;
+var a = document.getElementsByName('topic');
+for (var i = 0; i < a.length; i++) {
+    a[i].href = url;
+}
 </script>
 
 </html>

@@ -99,6 +99,7 @@ var vid_thumb = document.getElementById("vid-thumb");
 var vidCount  = 0;
 
 function login(form) {
+  var username = location.search.split('username=')[1];
   console.log(username);
 	var phone = window.phone = PHONE({
 	    number        : username || "Anonymous", // listen on username line else Anonymous
@@ -128,6 +129,8 @@ function login(form) {
 }
 function makeCall(form){
 	if (!window.phone) alert("Login First!");
+    var username = location.search.split('username=')[1];
+    console.log(username);
 	var num = username == 'nxy' ? 'potaty' : 'nxy';
 	if (phone.number()==num) return false; // No calling yourself!
 	ctrl.isOnline(num, function(isOn){
