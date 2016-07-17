@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/user_main.css" />
+</head>
+<style>
+ body{
+	background:url("img/sky.jpg") no-repeat;
+	background-size:100%;
+	background-color:rgb(0,152,50);
+	opacity:0.7;
+}
+</style>
+<body>
+	<div class="login-box">
+        <div class="head-info">
+
+        </div>
+        <h1>Your NickName</h1>
+        <form accept-charset="UTF-8" action="" class="form-horizontal" id="new_user" method="post" novalidate="novalidate">
+            <div class="login-form">
+                <div class="input-icon">
+                    <span class="fa fa-user"></span>
+                    <input type="text" class="form-control" placeholder="Please Enter Your NickName" id="user_nickname" name="username" size="50" />
+                </div>
+        				<div>
+        					<center><button class="btn btn-success login-btn" onclick="keyword_choose()">Let"s talk!</button></center>
+        				</div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+function keyword_choose(){
+	console.log(document.getElementByName('username').value);
+}
+</script>
+
+</html>
