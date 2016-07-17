@@ -10,24 +10,29 @@
     <script src="js/modernizr.custom.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<style>
+    .box {
+
+    }
 		#vid-box{
 			width:47%;
       float: left;
-      height: 47%:
+      height: 200px;
 		}
 		#vid-box video{
-			width:47%;
 		}
     #vid-thumb {
       float: right;
       width: 47%;
-      height: 47%;
+      height: 200px;
     }
+
 	</style>
 </head>
 <body>
+  <div class="box">
   <div id="vid-box" class="video2"></div>
   <div id="vid-thumb"></div>
+  </div>
 <div class = "bodyDiv">
 
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
@@ -77,7 +82,7 @@
 				    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
 				</svg>
         </span>
-        <button class="cbutton cbutton--effect-radomir md-trigger" type="submit" value="Call" style="margin-top: 40px; margin-left:-10px" data-modal="modal-13">
+        <button class="cbutton cbutton--effect-radomir md-trigger" type="submit" value="Call" name="submit_button" style="margin-top: 40px; margin-left:-10px" data-modal="modal-13">
             <i class="cbutton__icon fa fa-fw fa fa fa-phone-square"></i>
         </button>
 	</form>
@@ -193,6 +198,7 @@ function errWrap(fxn, form){
 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-46933211-3', 'auto');
 	ga('send', 'pageview');
+  document.getElementsByName('login_submit')[0].click();
 </script>
 
 </div>
