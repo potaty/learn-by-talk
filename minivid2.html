@@ -4,7 +4,7 @@
     <title>PubRTC + Mobile</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script type="text/javascript" src="speech.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
     <script src="js/modernizr.custom.js"></script>
@@ -13,10 +13,12 @@
 		#vid-box{
 			display: inline-block;
 			text-align:center;
-			width:100%;
+			width:47%;
+      float: left;
 		}
 		#vid-box video{
 			width:47%;
+      float: right;
 		}
 	</style>
 </head>
@@ -76,11 +78,14 @@
         </button>
 	</form>
 
-	<div id="inCall" class="ptext">
-		<button id="end" onclick="end()" >End</button>
-        <button id="mute" onclick="mute()">Mute</button>
-        <button id="pause" onclick="pause()">Pause</button>
-	</div>
+  <div id="results">
+    <span id="final_span" class="final"></span>
+    <span id="interim_span" class="interim"></span>
+  </div>
+  </br>
+  <div id="topics">
+    <span id="topic_span" class="topic"></span>
+  </div>
 
 	<div id="logs" class="ptext"></div>
 
